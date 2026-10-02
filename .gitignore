@@ -1,0 +1,10 @@
+mkdir TurismoPeru_Seguridad_PesantesRosario
+cd TurismoPeru_Seguridad_PesantesRosario
+git init -b main
+git config user.name "fabvpr"
+git config user.email "pesantesfabiana454@gmail.com"
+
+foreach ($d in "01_usuarios_roles","02_importacion_exportacion","03_backups","04_seguridad","05_reportes","06_powerbi","evidencias") {
+  New-Item -ItemType Directory -Name $d
+  New-Item -ItemType File -Path "$d\.gitkeep"
+}
